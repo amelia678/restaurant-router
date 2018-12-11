@@ -47,8 +47,14 @@ class App extends Component {
         <NavBar />
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
-        <Route path="/restaurants" exact component={Restaurants} />
-        <Route path="/restaurants/:neighborhood" component={OneNeighbor} />
+        {/* <Route path="/restaurants" exact component={Restaurants} />
+        <Route path="/restaurants/:neighborhood" component={OneNeighbor} /> */}
+        <Route path="/restaurants" render={(props) => {
+          return  <Restaurants neighborList={Object.keys(this.state.restaurants)} {...props} />
+        }} />
+        <Route path="/restaurants/:neighborhood" render={(props) => {
+          return <OneNeighbor neighbors={this.state.restaurants} {...props} />
+        }} />
       </div>
       </Router>
     );
