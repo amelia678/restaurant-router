@@ -11,6 +11,7 @@ import About from './About';
 import Home from './Home';
 import Restaurants from './Restaurants';
 import NavBar from './NavBar';
+import OneNeighbor from './OneNeighbor';
 
 class App extends Component {
   render() {
@@ -22,7 +23,7 @@ class App extends Component {
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/restaurants" exact component={Restaurants} />
-
+        <Route path="/restaurants/:neighborhood" component={OneNeighbor} />
       </div>
       </Router>
     );
