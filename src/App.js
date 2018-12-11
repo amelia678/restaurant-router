@@ -4,7 +4,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  // Link
 } from 'react-router-dom';
 
 import About from './About';
@@ -14,6 +14,31 @@ import NavBar from './NavBar';
 import OneNeighbor from './OneNeighbor';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      restaurants: {
+        'Buckhead': [
+          'Ru Sans',
+          'Maggianos',
+          'H & F Burger'
+          
+        ],
+
+        'Decatur' : [
+          'Brick Store',
+          '249',
+          'Victory'
+        ],
+        
+        'Midtown' : [
+          'La Fonda',
+          'Varuni Napoli',
+          'Mary Macs'
+        ]
+      }
+    }
+  }
   render() {
     return (
       <Router>
