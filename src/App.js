@@ -12,6 +12,7 @@ import Home from './Home';
 import Neighborhoods from './Restaurants';
 import NavBar from './NavBar';
 import OneNeighbor from './OneNeighbor';
+import OneRestaurant from './OneRestaurant';
 
 class App extends Component {
   constructor(props) {
@@ -124,9 +125,9 @@ class App extends Component {
         <Route path="/restaurants/:neighborhood" render={(props) => {
           return <OneNeighbor neighbors={(this.state.restaurants)} {...props} />
         }} />
-        {/* <Route path="/restaurants/:neighborhood/:menuitems" render={(props) => {
-          return <OneRestaurant />
-        }} /> */}
+        <Route path="/restaurants/:neighborhood/:menuitems" render={(props) => {
+          return <OneRestaurant restaurants={(this.state.restaurants)} {...props} />
+        }} />
       </div>
       </Router>
     );
