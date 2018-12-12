@@ -18,24 +18,93 @@ class App extends Component {
     super(props);
     this.state = {
       restaurants: {
-        'Buckhead': [
-          'Ru Sans',
-          'Maggianos',
-          'H & F Burger'
-          
-        ],
+        'Buckhead': {
 
-        'Decatur' : [
-          'Brick Store',
-          '249',
-          'Victory'
-        ],
+            'Ru Sans' : {
+              'items' : [
+                'california roll',
+                'crunchy roll',
+                'lobster roll'
+              ]
+            },          
+          
+            
+            'Maggianos': {
+              'items' :[
+                'chicken parmasean',
+                'lasagna',
+                'cheesecake'
+              ]
+            },
+            
+            'H & F Burger' : {
+              'items' : [
+                'hamburger',
+                'veggie burger',
+                'milkshake',
+                'fries'
+              ]
+              
+            }
+            
+          },
         
-        'Midtown' : [
-          'La Fonda',
-          'Varuni Napoli',
-          'Mary Macs'
-        ]
+
+        'Decatur' : {
+
+          'Brick Store' : {
+            'items' : [
+              'spinach artichoke dip',
+              'grilled cheese',
+              'lotsa beer'
+
+            ]
+          },
+          '249' : {
+            'items' : [
+              'black squid pasta',
+              'bolognese',
+              'red wine'
+            ]
+          }, 
+          
+          'Victory': {
+            'items' : [
+              'mini sandwiches',
+              'boozy milkshakes',
+              'crafty cocktails'
+            ]
+          }
+        
+        
+        },
+        
+        'Midtown' : {
+          'La Fonda': {
+            'items' : [
+              'paella',
+              'fish tacos',
+              'margaritas'
+            ]
+          },
+
+          'Varuni Napoli' : {
+            'items' : [
+              'neopolitan pizza',
+              'cannolis',
+
+            ]
+          }, 
+
+          'Mary Macs' : {
+            'items': [
+            'fried chicken',
+            'peach cobbler',
+            'fried okra',
+            'collard greens'
+            ]
+          }
+        }
       }
     }
   }
