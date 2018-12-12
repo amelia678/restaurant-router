@@ -9,7 +9,9 @@ import {Link} from 'react-router-dom';
     console.log(neighborFood)
     const neighborRestListItems= Object.keys(neighborFood).map(rest => {
         return(
-            <li>{rest}</li>
+            <li>
+            <Link to={`restaurants/:neighborhood/${rest}`}>{rest}</Link>
+            </li>
         )
     })
     return (

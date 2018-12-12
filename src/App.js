@@ -124,6 +124,9 @@ class App extends Component {
         <Route path="/restaurants/:neighborhood" render={(props) => {
           return <OneNeighbor neighbors={(this.state.restaurants)} {...props} />
         }} />
+        {/* <Route path="/restaurants/:neighborhood/:menuitems" render={(props) => {
+          return <OneRestaurant />
+        }} /> */}
       </div>
       </Router>
     );
