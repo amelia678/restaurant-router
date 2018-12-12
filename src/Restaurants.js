@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Restaurants = (props) => {
+const Neighborhoods = (props) => {
     const neighborList = props.neighborList.map(neighborName => {
         return (
             <li>
@@ -15,15 +15,7 @@ const Restaurants = (props) => {
             
            
                 <ul>
-                    {/* <li>
-                        <Link to="/restaurants/buckhead">Buckhead</Link>
-                    </li>
-                    <li>
-                        <Link to="/restaurants/decatur">Decatur</Link>
-                    </li>
-                    <li>
-                        <Link to="/restaurants/midtown">Midtown</Link>
-                    </li> */}
+                    
                     {neighborList}
                 </ul>
             
@@ -31,4 +23,4 @@ const Restaurants = (props) => {
     )
 }
 
-export default Restaurants;
+export default Neighborhoods;

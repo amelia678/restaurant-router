@@ -9,7 +9,7 @@ import {
 
 import About from './About';
 import Home from './Home';
-import Restaurants from './Restaurants';
+import Neighborhoods from './Restaurants';
 import NavBar from './NavBar';
 import OneNeighbor from './OneNeighbor';
 
@@ -18,7 +18,7 @@ class App extends Component {
     super(props);
     this.state = {
       restaurants: {
-        'Buckhead': {
+         'Buckhead': {
 
             'Ru Sans' : {
               'items' : [
@@ -98,10 +98,10 @@ class App extends Component {
 
           'Mary Macs' : {
             'items': [
-            'fried chicken',
-            'peach cobbler',
-            'fried okra',
-            'collard greens'
+              'fried chicken',
+              'peach cobbler',
+              'fried okra',
+              'collard greens'
             ]
           }
         }
@@ -119,10 +119,10 @@ class App extends Component {
         {/* <Route path="/restaurants" exact component={Restaurants} />
         <Route path="/restaurants/:neighborhood" component={OneNeighbor} /> */}
         <Route path="/restaurants" render={(props) => {
-          return  <Restaurants neighborList={Object.keys(this.state.restaurants)} {...props} />
+          return  <Neighborhoods neighborList={Object.keys(this.state.restaurants)} {...props} />
         }} />
         <Route path="/restaurants/:neighborhood" render={(props) => {
-          return <OneNeighbor neighbors={this.state.restaurants} {...props} />
+          return <OneNeighbor neighbors={(this.state.restaurants)} {...props} />
         }} />
       </div>
       </Router>

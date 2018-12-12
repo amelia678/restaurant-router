@@ -1,9 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const OneNeighbor = (props) => {
+
+ const OneNeighbor = (props) => {
     const allFood = props.neighbors;
     const neighborName = props.match.params.neighborhood;
     const neighborFood = allFood[neighborName];
+    console.log(neighborFood)
+    const neighborRestListItems= Object.keys(neighborFood).map(rest => {
+        return(
+            <li>{rest}</li>
+        )
+    })
     return (
         // <h2>
         //     {props.match.params.neighborhood}
@@ -13,12 +21,9 @@ const OneNeighbor = (props) => {
                 {neighborName}
             </h2>
             <ul>
-                {neighborFood.map((rest) => {
-                    return <li>{rest}</li>
-                })}
+                {neighborRestListItems}
             </ul>
         </div>
     )
 }
-
-export default OneNeighbor;
+ export default OneNeighbor;
