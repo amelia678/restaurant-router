@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Neighborhoods = (props) => {
-    const neighborList = props.neighborList.map(neighborName => {
+    const neighborList = props.neighborList.map((neighborName, index) => {
         return (
-            <li>
+            <li className="list-group-item"key={index}>
                 <Link to={`/restaurants/${neighborName}`}>{neighborName}</Link>
             </li>
         )
@@ -14,7 +14,7 @@ const Neighborhoods = (props) => {
             <h1>FOOD by neighborhood</h1>
             
            
-                <ul>
+                <ul className="list-group">
                     
                     {neighborList}
                 </ul>

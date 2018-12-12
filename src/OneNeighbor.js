@@ -6,23 +6,21 @@ import {Link} from 'react-router-dom';
     const allFood = props.neighbors;
     const neighborName = props.match.params.neighborhood;
     const neighborFood = allFood[neighborName];
-    console.log(neighborFood)
-    const neighborRestListItems= Object.keys(neighborFood).map(rest => {
+    // console.log(neighborFood)
+    const neighborRestListItems= Object.keys(neighborFood).map((rest, index) => {
         return(
-            <li>
+            <li className="list-group-item" key={index}>
             <Link to={`restaurants/${neighborName}/${rest}`}>{rest}</Link>
             </li>
         )
     })
     return (
-        // <h2>
-        //     {props.match.params.neighborhood}
-        // </h2>
+        
         <div>
             <h2>
                 {neighborName}
             </h2>
-            <ul>
+            <ul className="list-group">
                 {neighborRestListItems}
             </ul>
         </div>
