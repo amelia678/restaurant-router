@@ -14,8 +14,9 @@ code {
 }
 
 .navbar {
-  outline: solid 10px palegreen;
+  outline: solid 7px palegreen;
   width: 90%;
+  
   margin: auto;
 
 }
