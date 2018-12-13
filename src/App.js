@@ -143,7 +143,7 @@ class App extends Component {
           return  <Neighborhoods neighborList={this.state.places} {...props} />
         }} />
         <Route path="/restaurants/:neighborhood" render={(props) => {
-          return <OneNeighbor neighbors={(this.state.restaurants)} {...props} />
+          return <OneNeighbor neighbors={(this.state.locations)} {...props} />
         }} />
         <Route path="/restaurants/:neighborhood/:menuitems" render={(props) => {
           return <OneRestaurant restaurants={(this.state.restaurants)} {...props} />

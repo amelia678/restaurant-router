@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
     const neighborName = props.match.params.neighborhood;
     const neighborFood = allFood[neighborName];
     // console.log(neighborFood)
-    const neighborRestListItems= Object.keys(neighborFood).map((rest, index) => {
+    const neighborRestListItems= neighborFood.map((rest, index) => {
         return(
             <li className="list-group-item" key={index}>
             <Link to={`restaurants/${neighborName}/${rest}`}>{rest}</Link>
